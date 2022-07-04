@@ -330,7 +330,7 @@ export default {
     this.interactObj = interact(this.$refs.item);
     this.initResizeEvent();
     this.initDragEvent();
-    this.$once("hook:beforDestroyed", () => {
+    this.$once("hook:beforeDestroy", () => {
       this.interactObj.unset();
     });
   },

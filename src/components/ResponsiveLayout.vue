@@ -139,7 +139,7 @@ export default {
     });
     resizeOb.observe(this.$refs.layout);
     // // 销毁掉这些事件
-    this.$once("hook:beforeDestroyed", () => {
+    this.$once("hook:beforeDestroy", () => {
       this.$off("resizeEvent", this.resizeEvent);
       this.$off("dragEvent", this.dragEvent);
       resizeOb.disconnect();
